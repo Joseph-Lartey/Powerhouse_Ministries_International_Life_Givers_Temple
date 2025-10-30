@@ -18,22 +18,26 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 reveal(); // run on load
 
-
 // --- Mobile navbar toggle script ---
+// toggles the nav-right (so the same element contains donate + links)
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navRight = document.querySelector('.nav-right');
 const menuIcon = document.querySelector('.menu-toggle i');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+if (menuToggle && navRight) {
+  menuToggle.addEventListener('click', () => {
+    navRight.classList.toggle('open');
 
-  // Toggle between bars and close icon
-  menuIcon.classList.toggle('fa-bars');
-  menuIcon.classList.toggle('fa-xmark');
-});
+    // Toggle icon between bars and x
+    if (menuIcon) {
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-xmark');
+    }
+  });
+}
 
 // --- Force start at top of page when site loads ---
 window.addEventListener('load', function() {
-  window.scrollTo(0, 0);
+  // small delay to ensure browser doesn't restore scroll
+  setTimeout(() => window.scrollTo(0, 0), 50);
 });
-
