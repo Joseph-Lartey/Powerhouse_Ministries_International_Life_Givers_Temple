@@ -31,3 +31,9 @@ menuToggle.addEventListener('click', () => {
   menuIcon.classList.toggle('fa-bars');
   menuIcon.classList.toggle('fa-xmark');
 });
+
+// --- Force start at top of page when site loads ---
+window.addEventListener('load', function() {
+  window.scrollTo(0, 0);
+});
+
