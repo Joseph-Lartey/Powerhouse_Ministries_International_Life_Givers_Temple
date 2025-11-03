@@ -1005,6 +1005,12 @@ section {
     font-size: 1rem;
   }
 
+  .donate a[href^="tel"] {
+    color: #fff;          /* makes it white */
+    text-decoration: none; /* removes underline */
+    pointer-events: none;  /* disables tap/click if you want it to be non-clickable */
+  }
+
   .momo-container {
     flex-direction: column;
     gap: 15px;
