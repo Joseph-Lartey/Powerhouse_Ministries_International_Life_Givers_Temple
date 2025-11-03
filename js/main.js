@@ -18,20 +18,40 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 reveal(); // run on load
 
-
 // --- Mobile navbar toggle script ---
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const menuIcon = document.querySelector('.menu-toggle i');
 const donateBtn = document.querySelector('.donate-btn');
 
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent click from bubbling
   navLinks.classList.toggle('active');
-  // Toggle between bars and close icon
   menuIcon.classList.toggle('fa-bars');
   menuIcon.classList.toggle('fa-xmark');
 });
 
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (
+    navLinks.classList.contains('active') &&
+    !navLinks.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    navLinks.classList.remove('active');
+    menuIcon.classList.add('fa-bars');
+    menuIcon.classList.remove('fa-xmark');
+  }
+});
+
+// Close menu when clicking a nav link
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuIcon.classList.add('fa-bars');
+    menuIcon.classList.remove('fa-xmark');
+  });
+});
 
 // --- Donate Button: Hide on mobile, show in menu ---
 function handleDonatePlacement() {
@@ -54,15 +74,21 @@ function handleDonatePlacement() {
 window.addEventListener('resize', handleDonatePlacement);
 handleDonatePlacement();
 
+// --- Force start at top of page when site loads ---
+window.addEventListener('load', function () {
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, 100);
+});
 
-// --- Progress Images (one on mobile, stacked layout restored on desktop) ---
+// --- Progress Images (responsive behavior) ---
 function handleProgressImages() {
   const progressImages = document.querySelectorAll('.progress-images img');
 
   if (progressImages.length === 0) return;
 
   if (window.innerWidth <= 768) {
-    // On mobile: show only the first image, centered and full width
+    // On mobile: show only first image
     progressImages.forEach((img, i) => {
       img.style.display = i === 0 ? 'block' : 'none';
       img.style.position = 'relative';
@@ -84,7 +110,6 @@ function handleProgressImages() {
       img.style.borderRadius = '10px';
     });
 
-    // restore positioning offsets
     if (progressImages[0]) {
       progressImages[0].style.top = '0';
       progressImages[0].style.left = '0';
