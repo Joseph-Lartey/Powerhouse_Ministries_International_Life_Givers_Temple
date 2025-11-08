@@ -127,3 +127,22 @@ function handleProgressImages() {
 
 window.addEventListener('resize', handleProgressImages);
 handleProgressImages();
+
+
+// --- Mobile dropdown toggle for "Events" ---
+const eventsLink = document.querySelector('.nav-item.dropdown > a');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+if (eventsLink && dropdownMenu) {
+  eventsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle('active');
+  });
+
+  // Close when tapping outside
+  document.addEventListener('click', (e) => {
+    if (!dropdownMenu.contains(e.target) && !eventsLink.contains(e.target)) {
+      dropdownMenu.classList.remove('active');
+    }
+  });
+}

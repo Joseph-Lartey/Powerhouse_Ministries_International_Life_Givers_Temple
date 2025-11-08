@@ -1074,3 +1074,70 @@ section {
     font-size: 16px;
   }
 }
+
+
+/* --- Dropdown base --- */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item .fa-caret-down {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+/* Desktop dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f1eee8;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  text-align: left;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Hover on desktop */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile dropdown behavior */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .dropdown-menu a {
+    text-align: center;
+  }
+
+  /* Make dropdown visible when active */
+  .dropdown-menu.active {
+    display: block;
+  }
+}
