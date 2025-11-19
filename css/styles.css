@@ -439,13 +439,14 @@ section {
 .pastor-item {
   width: 100%;
   max-width: 280px;
+  
 }
 
 /* Pastor image */
 .pastor-item img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit:inherit;
   display: block;
   border: none;
 }
@@ -1140,4 +1141,377 @@ section {
   .dropdown-menu.active {
     display: block;
   }
+}
+
+/* Hero Section */
+.anniversary-hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/spiral.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Center Logo */
+.anniversary-logo {
+    width: 75%;
+    max-width: 35%; /* corrected from 450% */
+    margin-left: 35%;
+    margin-top: 3%;
+}
+
+/* Corner Images Wrapper */
+.corner-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* images shouldn't block clicking */
+}
+
+/* Hexagon Frame Style */
+.corner-image {
+    position: absolute;
+    width: 360px;
+    height: 350px;
+
+    /* HEXAGON frame */
+    clip-path: polygon(
+        15% 0%, 85% 0%,
+        100% 25%, 100% 75%,
+        85% 100%, 15% 100%,
+        0% 75%, 0% 25%
+    );
+
+    border: 8px solid #c7492e;
+    border-radius: 12px;
+    
+    background: #c7492e;
+}
+
+/* IMAGE that matches hexagon shape exactly */
+.corner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* same exact hexagon */
+    clip-path: polygon(
+        15% 0%, 85% 0%,
+        100% 25%, 100% 75%,
+        85% 100%, 15% 100%,
+        0% 75%, 0% 25%
+    );
+}
+
+
+
+/* LEFT HEXAGON – half off screen */
+.corner-image.left {
+    top: 40%;
+    left: -130px;   /* pushes 45% of the hexagon off-screen */
+}
+
+/* RIGHT HEXAGON – lower and half off screen */
+.corner-image.right {
+    top: 20%;
+    right: -130px;  /* pushes 45% of the hexagon off-screen */
+}
+
+
+/* Time + Location Row */
+.event-details {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.time-box {
+    background: #111;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+.location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    
+    gap: 10px;
+}
+.location span {
+    font-family: 'Roxborough CF', serif;
+    color: #000;
+}
+
+.location i {
+    color: #c7492e;
+    font-size: 1.4rem;
+}
+
+.program-section {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    background: white;   /* white background you wanted */
+    overflow: hidden;
+}
+
+/* Spiral background image */
+.spiral-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/lineup_no.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+               /* lighten the spiral */
+    z-index: 1;               /* behind the program */
+}
+
+/* The program outline image */
+.program-content {
+    position: relative;
+    z-index: 2;               /* place above spiral */
+    display: flex;
+    justify-content: center;
+}
+
+.program-image {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.tshirt-section {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.tshirt-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+/* SLIDER */
+.tshirt-slider {
+    width: 45%;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 95%;
+    object-fit:contain;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* DOTS */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fa420a;
+}
+
+/* TEXT */
+.tshirt-info {
+    width: 50%;
+    color: #000;
+    text-align: center;
+}
+
+.tshirt-info h2 {
+    font-family: 'Roxborough CF', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.tshirt-info p {
+    margin: 20px 0 30px;
+    font-size: 1.1rem;
+    width: 90%;
+    line-height: 1.6;
+}
+
+.buy-btn {
+    display: inline-block;
+    background: #fa420a;
+    padding: 15px 40px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    opacity: 0.85;
+}
+
+.top-orange-line {
+    width: 70%;
+    height: 4px;
+    background-color: #fa420a;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+/* ===================== MOBILE RESPONSIVE (ANNIVERSARY PAGE) ===================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .anniversary-hero {
+        height: 90vh;
+        padding-top: 120px;
+    }
+
+    .anniversary-logo {
+        width: 80%;
+        max-width: 80%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* HEXAGON IMAGES */
+    .corner-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .corner-image.left {
+        top: 65%;
+        left: -80px;   /* half-visible */
+    }
+
+    .corner-image.right {
+        top: 20%;
+        right: -80px;
+    }
+
+    /* TIME + LOCATION */
+    .event-details {
+        flex-direction: column;
+        gap: 15px;
+        margin-left: 0;
+        bottom: 20px;
+        text-align: center;
+    }
+
+    .time-box {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .location span {
+        font-size: 1rem;
+    }
+
+    /* PROGRAM IMAGE */
+    .program-image {
+        width: 100%;
+    }
+
+    /* T-SHIRT SECTION */
+    .tshirt-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .tshirt-slider {
+        width: 100%;
+    }
+
+    .slides {
+        height: 330px;
+    }
+
+    .tshirt-info {
+        width: 100%;
+    }
+
+    .tshirt-info h2 {
+        font-size: 2.2rem;
+    }
+
+    /* CONTACT */
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .map-box {
+        height: 300px;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+    .corner-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .corner-image.left {
+        top: 70%;
+        left: -65px;
+    }
+
+    .corner-image.right {
+        top: 18%;
+        right: -65px;
+    }
+
+    .slides {
+        height: 260px;
+    }
+
+    .tshirt-info h2 {
+        font-size: 1.8rem;
+    }
 }
