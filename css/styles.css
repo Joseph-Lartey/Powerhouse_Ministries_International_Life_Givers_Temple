@@ -1413,9 +1413,8 @@ section {
     .anniversary-logo {
         width: 60%;        /* smaller than 65% */
         max-width: 60%;
-        margin-left: 60px;
-        margin-right: 60px; /* moved slightly left */
-        margin-top: -10px;  /* lifted up a little */
+        margin-left: 10px; /* moved slightly left */
+        margin-top: -560px;  /* lifted up a little */
     }
 
     /* HEXAGON IMAGES */
