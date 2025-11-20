@@ -1413,7 +1413,7 @@ section {
     .anniversary-logo {
         width: 60%;        /* smaller than 65% */
         max-width: 60%;
-        margin-left: 260px; /* moved slightly left */
+        margin-left: 60px; /* moved slightly left */
         margin-top: -10px;  /* lifted up a little */
     }
 
