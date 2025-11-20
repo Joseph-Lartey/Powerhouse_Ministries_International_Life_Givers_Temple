@@ -1405,16 +1405,16 @@ section {
 
     /* HERO */
     .anniversary-hero {
-        height: 70vh;
+        height: 90vh;
         padding-top: 120px;
     }
 
-    /* Make logo a bit smaller + shift it left + slightly up */
+    /* Anniversary 20th Logo */
     .anniversary-logo {
-        width: 60%;        /* smaller than 65% */
+        width: 60%;         /* slightly smaller */
         max-width: 60%;
-        margin-left: 10px; /* moved slightly left */
-        margin-top: -560px;  /* lifted up a little */
+        margin-left: 240px; /* shift left a little */
+        margin-top: -10px;  /* move up slightly */
     }
 
     /* HEXAGON IMAGES */
@@ -1426,13 +1426,13 @@ section {
 
     /* Move left hexagon higher */
     .corner-image.left {
-        top: 40%;        /* higher than 45% */
+        top: 45%;
         left: -80px;
     }
 
     /* Move right hexagon higher */
     .corner-image.right {
-        top: -2%;        /* higher than 5% */
+        top: 5%;
         right: -80px;
     }
 
@@ -1504,20 +1504,20 @@ section {
     }
 
     .corner-image.left {
-        top: 45%;     /* slightly higher */
+        top: 48%;
         left: -60px;
     }
 
     .corner-image.right {
-        top: -5%;     /* slightly higher */
+        top: 0%;
         right: -60px;
     }
 
-    /* Small phones logo: smaller + moved up and left */
+    /* Anniversary Logo on very small phones */
     .anniversary-logo {
         width: 65%;
-        margin-left: 240px;
-        margin-top: -15px;
+        margin-left: 200px; /* shift left */
+        margin-top: -5px;   /* move up */
     }
 
     .slides {
