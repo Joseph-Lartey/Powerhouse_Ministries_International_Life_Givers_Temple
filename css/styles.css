@@ -1413,7 +1413,7 @@ section {
     .anniversary-logo {
         width: 65%;
         max-width: 65%;
-        margin-left: 30%;
+        margin-left: - 30%;
         margin-top: - 10px;
     }
 
