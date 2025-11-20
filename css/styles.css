@@ -1413,7 +1413,7 @@ section {
     .hero-center {
         top: 42% !important;      /* move up */
         left: 48% !important;     /* move slightly left */
-        transform: translate(-50%, -50%);
+        /* transform: translate(-50%, -50%); */
         position: absolute;
     }
 
