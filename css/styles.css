@@ -1419,7 +1419,7 @@ section {
 
     /* Anniversary 20th Logo */
     .anniversary-logo {
-        width: 90% !important;  
+        width: 90% ;  
         max-width: 110%   /* scale down */
     }
 
