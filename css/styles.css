@@ -1412,7 +1412,8 @@ section {
     /* FIXED — Move the WHOLE LOGO CONTAINER */
     .hero-center {
         top: 42% !important;      /* move up */
-        left: 30% !important;     /* move slightly left */
+        left: 30% !important;
+        margin-left:-10% ;
         transform: translate(-50%, -50%);
         position: absolute;
         width: 100% !important;
