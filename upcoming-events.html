@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Events - Life Givers Temple</title>
+    <meta name="description"
+        content="Stay connected with upcoming events at PMI Life Givers Temple. View our latest programs, special services, and church activities.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <a href="index.html">
+            <img src="assets/no_background.png" class="logo" alt="Logo" />
+        </a>
+
+        <div class="nav-right">
+            <ul class="nav-links">
+                <!-- Back to main website -->
+                <li><a href="index.html">← MAIN SITE</a></li>
+
+                <!-- Scroll links for events page -->
+                <li><a href="#events-hero">HOME</a></li>
+                <li><a href="#featured-event">FEATURED EVENT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= EVENTS HERO ================= -->
+    <section class="events-hero reveal" id="events-hero">
+        <div class="events-hero-overlay"></div>
+        <div class="events-hero-content">
+            <h4>PMI LIFE GIVERS TEMPLE</h4>
+            <h1>UPCOMING<br>EVENTS</h1>
+            <p>Stay connected with our church activities and special programs</p>
+            <a href="#featured-event" class="btn btn-primary">VIEW CURRENT EVENT</a>
+        </div>
+    </section>
+
+    <!-- ================= FEATURED EVENT SECTION ================= -->
+    <section class="featured-event reveal-left" id="featured-event">
+        <div class="event-container">
+
+            <!-- Event Flier Display -->
+            <div class="event-flier">
+                <!-- 
+          ====================================
+          TO UPDATE THE EVENT FLIER:
+          1. Replace the image src below with your new flier
+          2. Save the new flier in the 'assets' folder
+          3. Update the alt text to match the event name
+          ====================================
+        -->
+                <img src="assets/program.jpg" alt="Current Event Flier" class="flier-image">
+            </div>
+
+            <!-- Event Details -->
+            <div class="event-details-card">
+                <span class="event-badge">CURRENT EVENT</span>
+
+                <!-- 
+          ====================================
+          TO UPDATE EVENT DETAILS:
+          Simply edit the text below
+          ====================================
+        -->
+                <h2 class="event-title">Special Church Program</h2>
+
+                <div class="event-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div>
+                            <strong>Date</strong>
+                            <p>To Be Announced</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Time</strong>
+                            <p>8:00 AM</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Venue</strong>
+                            <p>PMI Life Givers Temple, Lashibi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-description">
+                    <h3>About This Event</h3>
+                    <p>
+                        Join us for an amazing time of worship, fellowship, and spiritual growth.
+                        This special program is designed to uplift, inspire, and draw you closer to God.
+                        All are welcome to attend!
+                    </p>
+                </div>
+
+                <div class="event-actions">
+                    <a href="#contact" class="btn btn-primary">GET DIRECTIONS</a>
+                    <a href="index.html#donate" class="btn btn-secondary">SUPPORT US</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NO UPCOMING EVENTS PLACEHOLDER ================= -->
+    <!-- 
+    Uncomment this section and comment out the featured-event section above
+    when there are no current events to display
+  -->
+    <!--
+  <section class="no-events reveal" id="featured-event">
+    <div class="no-events-content">
+      <i class="fa-solid fa-calendar-xmark"></i>
+      <h2>No Upcoming Events</h2>
+      <p>Check back soon for announcements about our next special program!</p>
+      <a href="index.html#schedule" class="btn btn-primary">VIEW WEEKLY SCHEDULE</a>
+    </div>
+  </section>
+  -->
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="contact reveal-left" id="contact">
+        <div class="contact-container">
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4156.534912374442!2d-0.08604202480873348!3d5.652017094329295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf832ab0358f09%3A0xa9e21590870f825d!2sPMI%20Life%20Givers%20Temple!5e1!3m2!1sen!2sgh!4v1761648483726!5m2!1sen!2sgh"
+                    style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="contact-info">
+                <h2 class="contact-title">Get In Touch</h2>
+
+                <div class="contact-detail">
+                    <p><strong>Phone</strong><br>0542459428</p>
+                    <p><strong>Email</strong><br>lifegiverstemple@gmail.com</p>
+
+                    <p><strong>Social</strong></p>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1BdLebbgAd/" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/pmi_lifegivers1?utm_source=qr&igsh=MWoxeGNxZW84eHBueg=="
+                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+
+                    <p class="contact-note">
+                        Life Givers Temple is a welcoming home for all. Join us for worship and fellowship.
+                        For inquiries or assistance, please reach out through any contact above.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4><a href="index.html">Home</a></h4>
+                <p><a href="index.html#about">About</a></p>
+                <p><a href="index.html#schedule">Weekly Schedule</a></p>
+                <p><a href="index.html#events">Building Project</a></p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Address</h4>
+                <p><a href="https://maps.google.com/?q=PMI+Life+Givers+Temple" target="_blank">PMI Life Givers Temple,
+                        Accra</a></p>
+                <p><a href="tel:+233542459428">+233 54 245 9428</a></p>
+                <p><a href="mailto:lifegiverstemple@gmail.com">lifegiverstemple@gmail.com</a></p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <p><a href="https://www.facebook.com/share/1BdLebbgAd/" target="_blank">Facebook</a></p>
+                <p><a href="https://www.instagram.com/pmi_lifegivers1?utm_source=qr&igsh=MWoxeGNxZW84eHBueg=="
+                        target="_blank">Instagram</a></p>
+                <p><a href="https://youtube.com" target="_blank">YouTube</a></p>
+                <p><a href="https://tiktok.com" target="_blank">TikTok</a></p>
+            </div>
+
+            <div class="footer-column logo-column">
+                <img src="assets/pmi_logo.jpeg" alt="Power Life Givers Temple Logo">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile navbar toggle for this page
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const menuIcon = document.querySelector('.menu-toggle i');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-xmark');
+            });
+        }
+
+        // Close menu when clicking a nav link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-xmark');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
